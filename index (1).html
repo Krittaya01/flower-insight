@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flower Insight 2025</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Mitr:wght@400;500;600&display=swap');
+*{box-sizing:border-box;scroll-behavior:smooth}
+:root{--pink:#e85b88;--pink-light:#fff0f5;--green:#75985b;--green-light:#f1f7e9;--cream:#fffaf5;--brown:#49362d;--text:#66534b;--white:#fff;--shadow:0 10px 30px rgba(80,50,40,.09)}
+body{margin:0;font-family:'Kanit',sans-serif;background:var(--cream);color:var(--text);transition:.3s}
+body.dark{--cream:#191616;--white:#282323;--brown:#fff1eb;--text:#d8cbc6;--pink-light:#38242c;--green-light:#263025}
+nav{position:fixed;top:0;left:0;width:100%;z-index:999;padding:13px 6%;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.94);backdrop-filter:blur(15px);box-shadow:0 2px 20px rgba(0,0,0,.08)}
+body.dark nav{background:rgba(35,30,30,.95)}
+.logo{font-family:'Mitr';font-size:22px;color:var(--pink);font-weight:600}.nav-links{display:flex;gap:25px}.nav-links a{color:var(--text);text-decoration:none;cursor:pointer}.nav-links a:hover{color:var(--pink)}
+.nav-btn{border:0;background:var(--pink-light);color:var(--pink);padding:9px 13px;border-radius:50%;cursor:pointer;font-size:17px}
+.hero{min-height:650px;padding:150px 8% 80px;display:flex;align-items:center;justify-content:space-between;background:radial-gradient(circle at 85% 30%,#ffd7e3 0,transparent 25%),linear-gradient(135deg,#fff0f5,#fffaf1);overflow:hidden}
+body.dark .hero{background:linear-gradient(135deg,#291e22,#211d1b)}
+.hero-text{max-width:650px}.badge{display:inline-block;background:var(--pink);color:white;padding:8px 20px;border-radius:30px}.hero h1{font-family:'Mitr';font-size:58px;line-height:1.15;color:var(--brown);margin:20px 0}.hero h1 span{color:var(--pink)}.hero p{font-size:19px;line-height:1.8}.hero-buttons{display:flex;gap:15px;margin-top:30px}
+.btn{border:0;padding:13px 24px;border-radius:30px;font-family:'Kanit';font-size:16px;cursor:pointer;transition:.25s}.btn-primary{background:var(--pink);color:white}.btn-secondary{background:white;color:var(--pink);border:1px solid #f0c6d3}.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(220,80,120,.2)}
+.flower-art{font-size:170px;animation:float 4s infinite ease-in-out}@keyframes float{50%{transform:translateY(-20px) rotate(3deg)}}
+section{padding:80px 8%}.section-title{text-align:center;margin-bottom:45px}.section-title h2{font-family:'Mitr';color:var(--brown);font-size:35px;margin-bottom:5px}.section-title p{color:#987f75}
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.info-card{background:var(--white);padding:28px;border-radius:22px;box-shadow:var(--shadow);text-align:center;transition:.3s}.info-card:hover{transform:translateY(-8px)}.info-icon{font-size:40px}.info-card h3{color:var(--pink);margin:12px 0 5px}.info-card p{margin:0}
+.ranking-section{background:var(--pink-light)}.search-box{max-width:700px;margin:0 auto 30px}.search-box input{width:100%;padding:16px 25px;border-radius:30px;border:2px solid #f2d5dd;outline:none;font-family:'Kanit';font-size:16px;background:var(--white);color:var(--text)}
+.filter-buttons{display:flex;justify-content:center;gap:10px;margin-bottom:30px;flex-wrap:wrap}.filter-buttons button{border:0;padding:8px 18px;border-radius:20px;background:var(--white);color:var(--text);cursor:pointer;font-family:'Kanit'}.filter-buttons button.active{background:var(--pink);color:white}
+.flower-list{max-width:950px;margin:auto}.flower-row{background:var(--white);padding:17px 22px;border-radius:17px;margin-bottom:12px;display:grid;grid-template-columns:50px 180px 1fr 70px 80px;align-items:center;gap:15px;box-shadow:0 4px 15px rgba(0,0,0,.05);transition:.25s}.flower-row:hover{transform:scale(1.015)}
+.rank{width:38px;height:38px;background:var(--pink);color:white;border-radius:50%;display:flex;justify-content:center;align-items:center;font-weight:bold}.bar-bg{height:15px;background:#eee3e3;border-radius:20px;overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,#e55c87,#f3a4bd);transition:1s}.percent{color:var(--pink);font-weight:bold}.detail-btn{border:0;border-radius:20px;padding:7px 12px;background:var(--pink-light);color:var(--pink);cursor:pointer;font-family:'Kanit'}
+.two-column{display:grid;grid-template-columns:1fr 1fr;gap:30px}.panel{background:var(--white);padding:30px;border-radius:25px;box-shadow:var(--shadow)}.panel h3{font-family:'Mitr';color:var(--green);font-size:24px}
+.reason{display:flex;align-items:center;gap:13px;padding:13px 0;border-bottom:1px solid #eee}.reason:last-child{border:0}.reason-icon{font-size:28px}.reason-text{flex:1}.reason-percent{color:var(--pink);font-weight:bold}
+.pie{width:250px;height:250px;border-radius:50%;margin:25px auto;background:conic-gradient(#86aa64 0deg 243deg,#eb6483 243deg 391deg,#f2aa43 391deg 505deg,#6496c8 505deg 542deg,#ddd 542deg 360deg);position:relative;animation:spinIn 1.5s}.pie:after{content:"";width:90px;height:90px;background:var(--white);position:absolute;left:80px;top:80px;border-radius:50%}@keyframes spinIn{from{transform:scale(0) rotate(-90deg)}to{transform:scale(1) rotate(0)}}.legend{line-height:2}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.stat-card{background:var(--white);padding:28px;border-radius:22px;box-shadow:var(--shadow)}.stat-card h3{color:var(--green);font-family:'Mitr'}.stat-item{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #eee}.stat-item b{color:var(--pink)}
+.trend{background:var(--green-light)}.trend-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.trend-card{background:var(--white);padding:30px;border-radius:25px;box-shadow:var(--shadow)}.trend-card li{margin:15px 0;line-height:1.7}
+.modal{display:none;position:fixed;z-index:2000;inset:0;background:rgba(0,0,0,.55);align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modal-content{background:var(--white);width:100%;max-width:500px;border-radius:25px;padding:35px;position:relative;animation:modalIn .3s}@keyframes modalIn{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}.close{position:absolute;right:20px;top:15px;border:0;background:none;font-size:28px;cursor:pointer;color:var(--text)}.modal-flower{font-size:70px;text-align:center}.modal h2{text-align:center;color:var(--pink);font-family:'Mitr'}
+.quote{text-align:center;background:linear-gradient(135deg,#fff0f4,#fff8ec)}.quote-box{max-width:750px;margin:auto;background:var(--white);padding:40px;border-radius:30px;box-shadow:var(--shadow)}.quote-box p{font-size:23px;line-height:1.8}.quote-mark{font-size:55px;color:var(--pink)}
+footer{background:#49352d;color:white;text-align:center;padding:35px}#topBtn{position:fixed;bottom:25px;right:25px;width:50px;height:50px;border:0;border-radius:50%;background:var(--pink);color:white;font-size:20px;cursor:pointer;display:none;z-index:500}
+@media(max-width:900px){.hero{flex-direction:column;text-align:center}.hero-text{max-width:100%}.hero h1{font-size:42px}.info-grid,.stat-grid{grid-template-columns:repeat(2,1fr)}.two-column,.trend-grid{grid-template-columns:1fr}.flower-row{grid-template-columns:40px 120px 1fr 60px}.detail-btn{display:none}}
+@media(max-width:600px){.nav-links{display:none}.hero{padding-top:120px}.hero h1{font-size:35px}.flower-art{font-size:100px}.info-grid,.stat-grid{grid-template-columns:1fr}section{padding:60px 5%}.flower-row{grid-template-columns:35px 90px 1fr 55px;gap:7px;padding:12px}.flower-name{font-size:13px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">🌷 Flower Insight</div><div class="nav-links"><a href="#home">หน้าหลัก</a><a href="#ranking">อันดับดอกไม้</a><a href="#reason">เหตุผล</a><a href="#stats">สถิติ</a><a href="#trend">เทรนด์</a></div><button class="nav-btn" onclick="toggleDark()">🌙</button></nav>
+
+<header class="hero" id="home"><div class="hero-text"><span class="badge">สถิติ 2025</span><h1>ดอกไม้ยอดนิยม<br>ที่<span>ผู้หญิงไทย</span><br>ปลูกมากที่สุด</h1><p>สำรวจพฤติกรรมการปลูกดอกไม้ของผู้หญิงไทย ปี 2025 ผ่านข้อมูลสถิติแบบ Interactive</p><div class="hero-buttons"><button class="btn btn-primary" onclick="document.getElementById('ranking').scrollIntoView()">🌸 ดูอันดับดอกไม้</button><button class="btn btn-secondary" onclick="document.getElementById('stats').scrollIntoView()">📊 ดูสถิติทั้งหมด</button></div></div><div class="flower-art">🌹🌷</div></header>
+
+<section><div class="section-title"><h2>📌 ข้อมูลการสำรวจ</h2><p>ภาพรวมของกลุ่มตัวอย่างที่ใช้ในการสำรวจ</p></div><div class="info-grid">
+<div class="info-card"><div class="info-icon">👩‍🌾</div><h3>กลุ่มตัวอย่าง</h3><p>ผู้หญิงไทย อายุ 18 ปีขึ้นไป<br><b>1,006 คน</b></p></div>
+<div class="info-card"><div class="info-icon">♀️</div><h3>เพศหญิง</h3><p><b>100%</b></p></div>
+<div class="info-card"><div class="info-icon">👥</div><h3>ช่วงอายุ</h3><p><b>18 – 60+ ปี</b></p></div>
+<div class="info-card"><div class="info-icon">📍</div><h3>พื้นที่สำรวจ</h3><p>ครอบคลุม<br><b>77 จังหวัด</b></p></div>
+</div></section>
+
+<section class="ranking-section" id="ranking"><div class="section-title"><h2>🏆 10 อันดับดอกไม้ยอดนิยม</h2><p>ค้นหา กรองข้อมูล และกดดูรายละเอียดของแต่ละดอกไม้</p></div><div class="search-box"><input type="text" id="search" placeholder="🔍 ค้นหาดอกไม้ เช่น กุหลาบ มะลิ ทานตะวัน..." onkeyup="searchFlower()"></div><div class="filter-buttons"><button class="active" onclick="filterFlowers('all',this)">ทั้งหมด</button><button onclick="filterFlowers('high',this)">มากกว่า 50%</button><button onclick="filterFlowers('medium',this)">30–50%</button><button onclick="filterFlowers('low',this)">ต่ำกว่า 30%</button></div><div class="flower-list" id="flowerList"></div><p style="text-align:center">* ผู้ตอบสามารถเลือกได้มากกว่า 1 ข้อ</p></section>
+
+<section id="reason"><div class="section-title"><h2>🌿 ทำไมผู้หญิงไทยถึงปลูกดอกไม้?</h2><p>เหตุผลหลักและสถานที่ที่นิยมปลูก</p></div><div class="two-column">
+<div class="panel"><h3>💗 เหตุผลหลัก</h3>
+<div class="reason"><div class="reason-icon">🌼</div><div class="reason-text">ช่วยผ่อนคลาย ลดความเครียด</div><div class="reason-percent">81.3%</div></div>
+<div class="reason"><div class="reason-icon">🏡</div><div class="reason-text">เพิ่มความสวยงามให้บ้าน/สวน</div><div class="reason-percent">72.6%</div></div>
+<div class="reason"><div class="reason-icon">🪴</div><div class="reason-text">เป็นงานอดิเรก/ใช้เวลาว่าง</div><div class="reason-percent">54.8%</div></div>
+<div class="reason"><div class="reason-icon">🌷</div><div class="reason-text">ปลูกเพื่อความเป็นสิริมงคล</div><div class="reason-percent">38.2%</div></div>
+<div class="reason"><div class="reason-icon">🌿</div><div class="reason-text">นำไปใช้ประโยชน์</div><div class="reason-percent">22.7%</div></div>
+<div class="reason"><div class="reason-icon">💰</div><div class="reason-text">จำหน่าย/สร้างรายได้เสริม</div><div class="reason-percent">15.3%</div></div></div>
+<div class="panel"><h3>📍 สถานที่ที่นิยมปลูก</h3><div class="pie"></div><div class="legend">🟢 ปลูกบริเวณบ้าน — <b>67.5%</b><br>🔴 ปลูกในกระถาง/ระเบียง/คอนโด — <b>41.2%</b><br>🟠 ปลูกในสวน/พื้นที่รอบบ้าน — <b>31.6%</b><br>🔵 ปลูกเพื่อการค้า — <b>10.3%</b></div></div>
+</div></section>
+
+<section id="stats"><div class="section-title"><h2>📊 สถิติพฤติกรรมการปลูก</h2><p>ข้อมูลเพิ่มเติมจากการสำรวจ</p></div><div class="stat-grid">
+<div class="stat-card"><h3>⏰ ระยะเวลาที่ใช้ดูแลต่อวัน</h3><div class="stat-item"><span>น้อยกว่า 1 ชั่วโมง</span><b>43.9%</b></div><div class="stat-item"><span>1 – 2 ชั่วโมง</span><b>38.6%</b></div><div class="stat-item"><span>2 – 3 ชั่วโมง</span><b>11.5%</b></div><div class="stat-item"><span>มากกว่า 3 ชั่วโมง</span><b>6.0%</b></div></div>
+<div class="stat-card"><h3>💰 งบประมาณต่อเดือน</h3><div class="stat-item"><span>น้อยกว่า 500 บาท</span><b>36.8%</b></div><div class="stat-item"><span>500 – 1,000 บาท</span><b>33.1%</b></div><div class="stat-item"><span>1,001 – 2,000 บาท</span><b>20.7%</b></div><div class="stat-item"><span>มากกว่า 2,000 บาท</span><b>9.4%</b></div></div>
+<div class="stat-card"><h3>💡 ช่องทางรับความรู้</h3><div class="stat-item"><span>โซเชียลมีเดีย</span><b>68.2%</b></div><div class="stat-item"><span>เว็บไซต์</span><b>34.6%</b></div><div class="stat-item"><span>กลุ่ม/ชุมชนต้นไม้</span><b>28.9%</b></div><div class="stat-item"><span>ครอบครัว/เพื่อน</span><b>24.3%</b></div><div class="stat-item"><span>ร้านต้นไม้/เทศกาล</span><b>18.7%</b></div><div class="stat-item"><span>หนังสือ/นิตยสาร</span><b>7.5%</b></div></div>
+</div></section>
+
+<section class="trend" id="trend"><div class="section-title"><h2>🌱 เทรนด์การปลูกดอกไม้ 2025</h2><p>แนวโน้มและคำแนะนำสำหรับคนรักดอกไม้</p></div><div class="trend-grid">
+<div class="trend-card"><h3>🌸 เทรนด์ที่น่าสนใจ</h3><ul><li><b>ดอกไม้ที่มีความหมายดี</b><br>เช่น มะลิ พุด ชบา สื่อถึงความรัก ความบริสุทธิ์ และความสง่างาม</li><li><b>ไม้ดอกขนาดเล็ก</b><br>เหมาะกับการปลูกในคอนโดหรือพื้นที่จำกัด</li><li><b>ไม้ดอกปลูกง่าย</b><br>ทนแดด ทนฝน และดูแลง่าย</li><li><b>การปลูกเพื่อสุขภาพ</b><br>Horticultural Therapy ได้รับความสนใจมากขึ้น</li></ul></div>
+<div class="trend-card"><h3>🪴 เคล็ดลับสำหรับมือใหม่</h3><ul><li>เลือกดอกไม้ให้เหมาะกับสภาพแสงและพื้นที่</li><li>รดน้ำสม่ำเสมอ แต่ไม่มากเกินไป</li><li>ใช้ดินและปุ๋ยที่เหมาะกับชนิดของดอกไม้</li><li>หมั่นดูแล ใส่ใจ และสังเกตอาการของต้นไม้</li></ul></div>
+</div></section>
+
+<section class="quote"><div class="quote-box"><div class="quote-mark">“</div><p>การปลูกดอกไม้<br>ไม่ใช่แค่ทำให้บ้านสวย<br>แต่ยังทำให้เราเบิกบาน<br>และมีความสุขในทุกวัน</p><div style="font-size:45px">🌹 🌷 🌻 🌸</div></div></section>
+
+<div class="modal" id="flowerModal"><div class="modal-content"><button class="close" onclick="closeModal()">×</button><div class="modal-flower" id="modalFlower">🌹</div><h2 id="modalName">กุหลาบ</h2><div style="text-align:center"><h1 style="color:var(--pink)" id="modalPercent">63.1%</h1><p id="modalDescription">ดอกไม้ยอดนิยมอันดับ 1</p></div><button class="btn btn-primary" style="width:100%" onclick="closeModal()">ปิดข้อมูล</button></div></div>
+<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<footer><h3>🌷 Flower Insight 2025</h3><p>สถิติพฤติกรรมการปลูกดอกไม้ของผู้หญิงไทย ปี 2025</p><p>กลุ่มตัวอย่าง 1,006 คน | ครอบคลุม 77 จังหวัด</p></footer>
+
+<script>
+const flowers=[
+['กุหลาบ','🌹',63.1,'เป็นดอกไม้ยอดนิยมอันดับ 1 จากการสำรวจ'],
+['มะลิ','🌼',57.4,'ดอกไม้ที่มีความหมายดีและเป็นที่นิยมในประเทศไทย'],
+['ดาวเรือง','🌼',51.2,'ดอกไม้สีสันสดใสและนิยมปลูกเพื่อความเป็นสิริมงคล'],
+['ชบา','🌺',49.8,'ไม้ดอกที่มีสีสันสดใสและเหมาะกับสภาพอากาศของประเทศไทย'],
+['กล้วยไม้','🌷',46.3,'ดอกไม้ที่ได้รับความนิยมและมีความหลากหลายของสายพันธุ์'],
+['บานไม่รู้โรย','🌸',41.7,'ดอกไม้ที่มีความทนทานและดูแลไม่ยาก'],
+['เฟื่องฟ้า','🌸',38.9,'เหมาะกับการปลูกกลางแจ้งและมีสีสันโดดเด่น'],
+['พุด','🌼',33.6,'ดอกไม้สีขาวที่มีกลิ่นหอมและมีความหมายที่ดี'],
+['เข็ม','🌺',28.5,'ไม้ดอกที่ปลูกง่ายและพบเห็นได้ทั่วไปในประเทศไทย'],
+['ทานตะวัน','🌻',25.7,'ดอกไม้สีเหลืองสดใสที่สร้างบรรยากาศสดใสให้พื้นที่']
+];
+function renderFlowers(list=flowers){
+ document.getElementById('flowerList').innerHTML=list.map((f,i)=>`<div class="flower-row"><div class="rank">${i+1}</div><div class="flower-name">${f[1]} ${f[0]}</div><div class="bar-bg"><div class="bar" style="width:${f[2]}%"></div></div><div class="percent">${f[2]}%</div><button class="detail-btn" onclick="showFlower('${f[0]}','${f[1]}','${f[2]}','${f[3]}')">ดู</button></div>`).join('');
+}
+function showFlower(name,icon,percent,description){document.getElementById('modalName').innerText=name;document.getElementById('modalFlower').innerText=icon;document.getElementById('modalPercent').innerText=percent+'%';document.getElementById('modalDescription').innerText=description;document.getElementById('flowerModal').classList.add('show')}
+function closeModal(){document.getElementById('flowerModal').classList.remove('show')}
+window.addEventListener('click',e=>{if(e.target===document.getElementById('flowerModal'))closeModal()});
+function searchFlower(){const q=document.getElementById('search').value.toLowerCase();renderFlowers(flowers.filter(f=>f[0].toLowerCase().includes(q)))}
+function filterFlowers(type,button){document.querySelectorAll('.filter-buttons button').forEach(b=>b.classList.remove('active'));button.classList.add('active');let list=flowers;if(type==='high')list=flowers.filter(f=>f[2]>50);if(type==='medium')list=flowers.filter(f=>f[2]>=30&&f[2]<=50);if(type==='low')list=flowers.filter(f=>f[2]<30);document.getElementById('search').value='';renderFlowers(list)}
+function toggleDark(){document.body.classList.toggle('dark')}
+window.addEventListener('scroll',()=>{document.getElementById('topBtn').style.display=document.documentElement.scrollTop>400?'block':'none'});
+renderFlowers();
+</script>
+</body>
+</html>
